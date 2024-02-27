@@ -1,8 +1,8 @@
 <?php
 $dbServer = "localhost";
 $dbUser = "root";
-$dbPassword = "";
-$dbName = "tododb";
+$dbPassword = "0000";
+$dbName = "php_todo";
 
 
 // Connnecting to datbase with mysqli (oo way)
@@ -19,8 +19,8 @@ $dbName = "tododb";
 
 // Connecting to databae with PDO
 try {
-    $db = new PDO("mysql:host={$dbServer};dbname={$dbName}", $dbUser, $dbPassword);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$db = new PDO("mysql:host={$dbServer};dbname={$dbName}", $dbUser, $dbPassword);
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException) {
-    die("Can not connect to database");
+	die("Can not connect to database");
 }
